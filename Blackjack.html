@@ -1,0 +1,118 @@
+<!doctype html>  
+<html>
+<head>
+<title>Blackjack (21)</title>
+<link rel="stylesheet" type="text/css" href="Blackjack.css">
+<script type="text/javascript" src="Blackjack.js"></script>
+</head>
+<body>
+<!--<body onLoad="setupGame();">-->
+	<form class="form" id="playTable">
+		<!-- This is a Flexbox container-->
+		<div class="heading">
+			<img class="spadeheart" src="images/SpadeHeart.gif" alt="SpadeHeart"/>
+			<div><h1 id="h1Java"></h1></div><div><h1 id="h1Script"></h1></div>
+			<div><h1 id="h1Blackjack" class="blackjacktext"></h1></div>
+			<img class="clubdiamond" src="images/ClubDiamond.gif" alt="ClubDiamond"/>
+		</div>	
+		<p class="border"></p><!-- Horizontal Rule using a border instead -->
+		<br>
+		<!-- This is another Flexbox container.-->
+		<div class="flexboxTextDealerCard">   
+			<h2 class="players" id="dealerHand"></h2>
+        	<!-- Draw from the dealer's side of the table (Card placeholders) -->
+			<div id="card0">
+				<img src="images/null.png" width="45" height="64" id="pic0" alt="pic0">
+            </div>
+			<div id="card1">
+				<img src="images/null.png" width="45" height="64" id="pic1" alt="pic1">
+            </div>
+			<div class="dealerCards" id="card2">
+				<img src="images/null.png" width="45" height="64" id="pic2" alt="pic2">
+            </div>
+			<div class="dealerCards" id="card3">
+				<img src="images/null.png" width="45" height="64" id="pic3" alt="pic3">
+            </div>
+			<div id="card4">
+				<img src="images/null.png" width="45" height="64" id="pic4" alt="pic4">
+            </div>
+			<div id="card5">
+				<img src="images/null.png" width="45" height="64" id="pic5" alt="pic5">
+            </div>
+			<div id="card6">
+				<img src="images/null.png" width="45" height="64" id="pic6" alt="pic6">
+            </div>
+			<div id="card7">
+				<img src="images/null.png" width="45" height="64" id="pic7" alt="pic7">
+            </div>
+			<div id="card8"><img src="images/null.png" width="45" height="64" id="pic8" alt="pic8">
+            </div>
+			<div id="card9"><img src="images/null.png" width="45" height="64" id="pic9" alt="pic9">
+            </div>
+			<div id="card10">
+				<img src="images/null.png" width="45" height="64" id="pic10" alt="pic10">
+            </div>
+			<div id="card11">
+				<img src="images/null.png" width="45" height="64" id="pic11" alt="pic11">
+            </div>
+		</div>
+		<br>
+		<!-- This is the last Flexbox container.-->
+		<div class="flexboxTextPlayerCard">
+			<h2 class="players" id="playerhand"></h2>   
+			<!-- and set-up the cards for the player's side (Card placeholders)-->
+			<div id="card12">
+				<img src="images/null.png" width="45" height="64" id="pic12" alt="pic12">
+            </div>
+			<div id="card13">
+				<img src="images/null.png" width="45" height="64" id="pic13" alt="pic13">
+            </div>
+			<div class="playerCards" id="card14">
+				<img src="images/null.png" width="45" height="64" id="pic14" alt="pic14">
+            </div>
+			<div class="playerCards" id="card15">
+				<img src="images/null.png" width="45" height="64" id="pic15" alt="pic15">
+            </div>
+			<div id="card16">
+				<img src="images/null.png" width="45" height="64" id="pic16" alt="pic16">
+            </div>
+			<div id="card17">
+				<img src="images/null.png" width="45" height="64" id="pic17" alt="pic17">
+            </div>
+			<div id="card18">
+				<img src="images/null.png" width="45" height="64" id="pic18" alt="pic18">
+            </div>
+			<div id="card19">
+				<img src="images/null.png" width="45" height="64" id="pic19" alt="pic19">
+            </div>
+			<div id="card20">
+				<img src="images/null.png" width="45" height="64" id="pic20" alt="pic20">
+            </div>
+			<div id="card21">
+				<img src="images/null.png" width="45" height="64" id="pic21" alt="pic21">
+            </div>
+			<div id="card22">
+				<img src="images/null.png" width="45" height="64" id="pic22" alt="pic22">
+            </div>
+			<div id="card23">
+				<img src="images/null.png" width="45" height="64" id="pic23" alt="pic23">
+            </div>
+		</div>
+		<!-- End of the Flexbox container.-->
+    	<br>
+		<h2 class="players" id="dealerscore"></h2>
+    	<h2 class="players" id="playerscore"></h2>
+        <div class="totalScore">
+			<h2 id="gameResults"><span id="wins"></span><span id="losses"></span></h2>
+		</div>
+	<input id="dealButton" name="deal" type="button" value="Deal" onClick="dealHand();">
+	<br />
+	<div id="playButtons">
+		<input id="HitButton" type="button" name="Hit" value="Hit" onClick="hit( PLAYER );">
+		<input id="StandButton" type="button" name="Stand" value="Stand" onClick="stand();"> 
+    </div>
+		<div id="appendMsg"></div>
+		<input  id="nextGame" type="button" name="nextGame" value="Next Hand" onClick="window.newDeal();">
+	</form>
+</body>
+</html>
